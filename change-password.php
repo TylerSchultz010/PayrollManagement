@@ -9,8 +9,12 @@
 
     <body>
 
-        <?php include 'header.php';
-        
+        <?php
+        session_start();
+        if (!isset($_SESSION["username"])) {
+            header("location:index.php");
+        }include 'header.php';
+
         echo '<form action = "change-password-action.php" style = "width:500px; float: left;" class = "container-fluid p-3">
                 <div class="mb-3">
                     <label class="form-label">Old Password</label>

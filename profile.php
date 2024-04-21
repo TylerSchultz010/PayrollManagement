@@ -9,9 +9,14 @@
 
     <body>
 
-        <?php include 'header.php';
-        
+        <?php
         session_start();
+        if (!isset($_SESSION["username"])) {
+
+            header("location:index.php");
+        }
+        include 'header.php';
+
         $username = $_SESSION["username"];
         $email = "";
         $phoneNumber = "";

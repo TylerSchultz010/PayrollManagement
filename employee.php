@@ -5,6 +5,11 @@ if (!isset($_SESSION["username"])) {
 
     header("location:index.php");
 }
+
+if (!isset($_SESSION["username"])) {
+
+    header("location:index.php");
+}
 ?>
 
 
@@ -72,7 +77,7 @@ echo '<h2>Welcome ' . $firstName . '</h2>'; ?>
         </form>
 
 <script>
-  // Function to add rows dynamically for each day of the current week (Monday to Friday)
+  // Function to add rows dynamically for each day of the current week
   function addRowsForCurrentWeek() {
     var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var today = new Date();

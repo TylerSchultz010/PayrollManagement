@@ -1,8 +1,13 @@
 <?php
 
+session_start();
+if (!isset($_SESSION["username"])) {
+
+    header("location:index.php");
+}
+
 $oldEmail = $_GET['old-email'];
 $newEmail = $_GET['new-email'];
-session_start();
 $username = $_SESSION["username"];
 require 'DBConnect.php';
 $sql = "SELECT * FROM user WHERE username = ?";

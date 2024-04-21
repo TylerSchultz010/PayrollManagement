@@ -16,13 +16,13 @@
             <h4 class="widget-title mb-4">Learn More</h4>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <a href="alerts.php" class="link-secondary text-decoration-none">Contact</a>
+                <a href="contact.php" class="link-secondary text-decoration-none">Contact</a>
               </li>
               <li class="mb-2">
-                <a href="alerts.php" class="link-secondary text-decoration-none">Terms of Service</a>
+                <a href="terms-of-service.php" class="link-secondary text-decoration-none">Terms of Service</a>
               </li>
               <li class="mb-0">
-                <a href="alerts.php" class="link-secondary text-decoration-none">Privacy Policy</a>
+                <a href="privacy-policy.php" class="link-secondary text-decoration-none">Privacy Policy</a>
               </li>
             </ul>
           </div>

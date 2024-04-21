@@ -1,18 +1,24 @@
-<?php include 'header.php';
+<?php
+session_start();
+
+if (!isset($_SESSION["username"])) {
+
+    header("location:index.php");
+}
+include 'header.php';
 
 $date = $_GET['date'];
 $hours = $_GET['hours'];
 $tasks = $_GET['tasks'];
 
 $message = "";
-session_start();
 $userid = $_SESSION['userid'];
 require 'DBConnect.php';
 
 
 for ($x = 0; $x < 7; $x++) 
 {
-    if ($hours[$x] > 0)                         //if user worked on day $x
+    if ($hours[$x] > 0)                         //If user worked on day $x
     {
         $sql = "insert into submission values (0, '$date[$x]', '$hours[$x]', '$tasks[$x]', '$userid')";
 
@@ -27,7 +33,7 @@ for ($x = 0; $x < 7; $x++)
 
 $conn->close();
 
-if ($message == "Update Successful")
+if ($message == "Update Successful")           //Message variable will determine the prompt that appears
 {
 echo "<div class='alert alert-success'>
   <strong>Success!</strong> Your hours have been successfully logged in the database.

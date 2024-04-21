@@ -1,8 +1,12 @@
 <?php
+session_start();
+if (!isset($_SESSION["username"])) {
+
+    header("location:index.php");
+}
 
 $oldPswd = $_GET['old-pswd'];
 $newPswd = $_GET['new-pswd'];
-session_start();
 $username = $_SESSION["username"];
 require 'DBConnect.php';
 $sql = "SELECT * FROM user WHERE username = ?";

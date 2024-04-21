@@ -7,6 +7,11 @@ $db = "Payroll";
 
 session_start();
 
+if (isset($_SESSION["username"])) {
+
+    header("location:employee.php");
+}
+
 $data = mysqli_connect($host, $user, $password, $db);
 
 if ($data === false) {
@@ -31,6 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['userid'] = $row['userID'];
         $_SESSION["username"] = $username;
         $_SESSION["firstName"] = $row['firstName'];
+        $_SESSION["lastName"] = $row['lastName'];
+        $_SESSION["email"] = $row['email'];
 
         header("location:employee.php");
     } elseif ($row["usertype"] == "admin") {
@@ -38,6 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['userid'] = $row['userID'];
         $_SESSION["username"] = $username;
         $_SESSION["firstName"] = $row['firstName'];
+        $_SESSION["lastName"] = $row['lastName'];
+        $_SESSION["email"] = $row['email'];
 
         header("location:employee.php");
     } else {
