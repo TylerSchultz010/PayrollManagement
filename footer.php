@@ -7,7 +7,7 @@
             &copy; 2024. All Rights Reserved.
           </div>
           <div class="credits text-secondary text-center text-md-start mt-2 fs-7">
-            Built by Tyler and Tommy
+            Built by Tyler Schultz and Tommy Noudaranouvong
           </div>
         </div>
 

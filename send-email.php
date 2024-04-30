@@ -25,15 +25,15 @@ if (isset($_POST["submit"])) {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'tschult2@student.fitchburgstate.edu';
-    $mail->Password = 'tqrhnnwathimmjbd';
+    $mail->Username = '?????????????????';          //your gmail
+    $mail->Password = '!!!!!!!!!!!!!!!!!';          //your gmail password
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
-    $mail->setFrom('tschult2@student.fitchburgstate.edu');
+    $mail->setFrom('????????????????');
 
     $email = $_SESSION["email"];
-    $mail->addAddress('tnoudara@student.fitchburgstate.edu');
+    $mail->addAddress('tyler.schultz.010@gmail.com');
     $mail->AddCC($email);
 
     $mail->isHTML(true);

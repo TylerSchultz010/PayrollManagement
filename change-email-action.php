@@ -42,7 +42,7 @@ if (!empty($result) && $result->num_rows > 0) {
     header("location:profile.php");
   } 
   else {
-    header("location:change-phone.php");
+    header("location:change-email.php");
   }
 } 
 
